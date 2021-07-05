@@ -58,7 +58,7 @@ while True:
 
         img_bw = img_pil.convert('L')
 
-        img_resized = img_bw.resize((28, 28), Image.ANTIALIAS)
+        img_resized = img_bw.resize((22, 30), Image.ANTIALIAS)
 
         # import the img
         img_inverted = PIL.ImageOps.invert(img_resized)
@@ -74,7 +74,7 @@ while True:
         img_final = np.asarray(img_scaled)/max_pixel
 
         # create a test sample and make a prediction
-        test_sample = np.array(img_scaled).reshape(1, 784)
+        test_sample = np.array(img_scaled).reshape(1, 660)
 
         test_prediction = classifier.predict(test_sample)
         print('Prediction: ',test_prediction)
