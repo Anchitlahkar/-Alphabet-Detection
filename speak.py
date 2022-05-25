@@ -30,7 +30,7 @@ def speak_word():
     speak(sentence)
 
 
-def spaek_number():
+def speak_number():
     number = detect_numbers(img_converted)
     number_sentence = ""
 
@@ -41,10 +41,10 @@ def spaek_number():
     speak(number_sentence)
 
 
-user = input("\nWhat to do??\t")
+user = input("\nWhat to do?? (num/str)\t")
 if user == "num":
     print("\n\n")
-    spaek_number()
+    speak_number()
 
 elif user == "str":
     print("\n\n")
