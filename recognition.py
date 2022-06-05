@@ -42,6 +42,9 @@ def mark_letters(img):
     hImg, wImg, _ = img.shape
     boxes = pytesseract.image_to_boxes(img)
 
+    return boxes
+
+"""
     for b in boxes.splitlines():
         # print(b)
         b = b.split(' ')
@@ -53,7 +56,7 @@ def mark_letters(img):
 
     cv2.imshow('Result', img)
     cv2.waitKey(0)
-
+"""
 
 def detect_Word(img):
     hImg, wImg, _ = img.shape
