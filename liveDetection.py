@@ -11,9 +11,15 @@ while True:
 	ret, frm = capture.read()
 
 	img_converted = cv2.cvtColor(frm, cv2.COLOR_BGR2RGB)
+	
 	# text = findText(img_converted)
 	# print(text)
 	boxes = mark_letters(img_converted)
+
+	x = None
+	y = None
+	w = None
+	h = None
 
 	for b in boxes.splitlines():
 		hImg, wImg, _ = img_converted.shape
